@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Programs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      margin: 20px 10px;
+      color: #006064;
+      font-size: 2rem;
+    }
+    .program-card {
+      background: white;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 600px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    .program-card:hover {
+      transform: scale(1.02);
+    }
+    h3 {
+      margin-top: 0;
+      color: #004d40;
+      border-bottom: 2px solid #4dd0e1;
+      padding-bottom: 5px;
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-weight: bold;
+      color: #004d40;
+      font-size: 0.9rem;
+    }
+    @media screen and (max-width: 480px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+      .program-card {
+        padding: 15px;
+      }
+      h3 {
+        font-size: 1.1rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>JavaScript Programs by Priyanshu Patel</h2>
+
+  <div id="program1" class="program-card"></div>
+  <div id="program2" class="program-card"></div>
+  <div id="program3" class="program-card"></div>
+  <div id="program4" class="program-card"></div>
+  <div id="program5" class="program-card"></div>
+
+  <footer>Created by Priyanshu Patel</footer>
+
+  <script>
+    // 1. Program to print name and address
+    const name = "Priyanshu Patel";
+    const address = "Arrah, Bhojpur, Bihar";
+    document.getElementById("program1").innerHTML =
+      `<h3>1. Name and Address</h3>
+      <p><strong>Name:</strong> ${name}<br><strong>Address:</strong> ${address}</p>`;
+
+    // 2. Check whether value and data-type of two variables are the same
+    const var1 = "54";
+    const var2 = 54;
+    const areSame = (var1 === var2);
+    document.getElementById("program2").innerHTML =
+      `<h3>2. Check Value and Data-Type</h3>
+      <p><strong>var1:</strong> ${var1} (${typeof var1})<br>
+      <strong>var2:</strong> ${var2} (${typeof var2})<br>
+      <strong>Are they the same?</strong> ${areSame}</p>`;
+
+    // 3. Add two strings and return them with all letters capitalized
+    const str1 = "Priyanshu";
+    const str2 = "Patel";
+    const concatenated = (str1 + " " + str2).toUpperCase();
+    document.getElementById("program3").innerHTML =
+      `<h3>3. Concatenate and Capitalize Strings</h3>
+      <p><strong>string1:</strong> ${str1}<br>
+      <strong>string2:</strong> ${str2}<br>
+      <strong>Concatenated and Capitalized:</strong> ${concatenated}</p>`;
+
+    // 4. Convert the length of a string in bytes
+    const inputString = "Hello World!";
+    const byteLength = new TextEncoder().encode(inputString).length;
+    document.getElementById("program4").innerHTML =
+      `<h3>4. String Length in Bytes</h3>
+      <p><strong>String:</strong> ${inputString}<br>
+      <strong>Byte Length:</strong> ${byteLength}</p>`;
+
+    // 5. Round a number to a specified number of digits
+    const number = 234.456789;
+    const digits = 3;
+    const roundedNumber = Number(number.toFixed(digits));
+    document.getElementById("program5").innerHTML =
+      `<h3>5. Round a Number</h3>
+      <p><strong>Original Number:</strong> ${number}<br>
+      <strong>Rounded to ${digits} digits:</strong> ${roundedNumber}</p>`;
+  </script>
+</body>
+</html>
